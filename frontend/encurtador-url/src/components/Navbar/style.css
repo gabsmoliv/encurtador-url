@@ -1,0 +1,79 @@
+.page-header{
+    background-color:   var(--color-primary-dark);
+    padding: 1.8rem 4.4rem;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+   
+
+  }
+  
+  .secondary-menu {
+    font: 400 1.6rem Archivo;
+    color: var(--color-base);
+    margin-left: auto;
+    list-style: none;
+  }
+
+  .menu .app-name {
+    font: 400 0rem Archivo;
+    color: var(--color-base);
+  }
+  
+  .page-header app-name {
+    color: var(--color-base);
+  }
+  .page-header > a > img {
+    max-width: 20rem;
+  }
+  
+  .page-header img {
+    max-width: 12rem;
+  }
+  
+  .page-header .navbar { 
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+    
+  .page-header .navbar a {
+    text-decoration: none;
+    font: 400 1.6rem Archivo;
+    margin-left: 0rem;
+    color: var(--color-link-menu);
+  
+    transition: opacity .2s ;
+    transition: font-size .5s;
+    
+  }
+  
+  .page-header .navbar a:hover{
+    opacity: .8;
+    font-size: 1.7rem;
+  }
+  
+  .page-header .logout a:hover{
+    font-size: 1.7rem;
+  }
+  
+
+  .secondary-menu img{
+    margin-left: 1.0rem;
+  }
+
+  .logout {
+    display: flex;
+    margin-right: 3.4rem;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  
+  .logout span{
+    letter-spacing: .1rem;
+    font: 400 1.3rem Archivo;
+    margin-right: 3.4rem;
+    color: var(--color-link-menu)
+  }

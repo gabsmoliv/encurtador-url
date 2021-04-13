@@ -9,7 +9,7 @@
 Tecnologias usadas para desenvolver a solução:
 
 * [**JAVA**] - Linguagem multiplataforma de alto desempenho; Versão usada 11;
-* [**SRPING MVC**] - Framework para desenvolvimento de aplicações web;
+* [**SRPING BOOT**] - Framework para desenvolvimento de aplicações web;
 * [**MYSQL**] - Banco de dados relacional mantido pela oracle;
 * [**REACT**] - Framework para criar UI web com JavaScript;
 
@@ -26,7 +26,7 @@ Se a aplicação estiver rodando localmente, considerar hostname como localhost:
 
 ### INFOS
 
-* IDE = IntelliJ;
-* Tecnlogia de Back-End = Spring MVC;
-* Tecnlogia de Front-End = BootStrap;
+* IDE = IntelliJ para Java e VisualStudio para React;
+* Tecnlogia de Back-End = Spring Boot;
+* Tecnlogia de Front-End = React;
 * SGBD = MYSQL;

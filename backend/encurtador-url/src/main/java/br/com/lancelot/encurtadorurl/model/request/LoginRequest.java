@@ -1,0 +1,16 @@
+package br.com.lancelot.encurtadorurl.model.request;
+
+import lombok.Data;
+
+/**
+ * @author gabriel on 11/04/2021
+ */
+
+@Data
+public class LoginRequest {
+
+    private String usuario;
+
+    private String senha;
+
+}
