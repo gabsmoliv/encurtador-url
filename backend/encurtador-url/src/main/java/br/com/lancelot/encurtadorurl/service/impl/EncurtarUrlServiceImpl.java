@@ -46,9 +46,6 @@ public class EncurtarUrlServiceImpl implements EncurtarUrlService {
         Random gerarAleatorio = new Random();
         StringBuilder encurtada = new StringBuilder();
 
-        System.out.println("validar a bixinha");
-        System.out.println(urlValidada);
-
         //Url encurtada vai ter length de 6 e dependendo do valor aleatorio pode ter um numero, letra maiscula ou minuscula.
         for(int i = 0; i < 6; i++) {
             Double numeroSort = gerarAleatorio.nextDouble()*100;
