@@ -2,7 +2,7 @@
 
 ## Descrição
 
-  Sistema de encurtamento de urls desenvolvido para o processo seletivo Logique Sistema. A partir de urls válidas um usuário cadastrado no sistema podera realizar operações e usar suas urls de formas mais práticas.
+A partir de urls válidas um usuário cadastrado no sistema podera realizar operações e usar suas urls de formas mais práticas.
 
 ### Tecnologias
 
