@@ -1,10 +1,5 @@
 package br.com.lancelot.encurtadorurl.security;
 
-import static br.com.lancelot.encurtadorurl.util.Constantes.URI_LOGIN;
-import static br.com.lancelot.encurtadorurl.util.Constantes.URI_USUARIOS;
-import static br.com.lancelot.encurtadorurl.util.Constantes.REQUISICAO_NEGADA;
-import static br.com.lancelot.encurtadorurl.util.Exceptions.onlyThrow;
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -18,7 +13,6 @@ import javax.servlet.FilterChain;
 import javax.servlet.http.HttpServletRequest;
 
 import java.io.IOException;
-import java.util.Objects;
 
 /**
  * @author gabriel on 09/04/2021
@@ -37,27 +31,22 @@ public class RESTFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
-        JWTAuthUtils auth = new JWTAuthUtils();
 
-       log.info("Começando uma trasanção em : {}", req.getRequestURI());
-        if(URI_LOGIN.equals(req.getRequestURI()) || URI_USUARIOS.equals(req.getRequestURI())) {
-            log.info("Commitando uma trasanção em : {}", req.getRequestURI());
-            chain.doFilter(request, response);
-        } else {
+        log.info("Commitando uma trasanção em : {}", req.getRequestURI());
+        chain.doFilter(request, response);
 
-           String token = req.getHeader("Authorization");
 
-            if(Objects.nonNull(token)) {
-                if(auth.verifyToken(token)) {
-                    chain.doFilter(request, response);
-                    log.info("Commitando uma trasanção em : {}", req.getRequestURI());
-                }
+        //String token = req.getHeader("Authorization");
 
-            } else {
-                onlyThrow(REQUISICAO_NEGADA);
-                log.error("Requesição sem token de identificação!");
+        /*if(Objects.nonNull(token)) {
+            if(auth.verifyToken(token)) {
+
             }
-        }
+
+        } else {
+            onlyThrow(REQUISICAO_NEGADA);
+            log.error("Requesição sem token de identificação!");
+        }*/
     }
 
     @Override
