@@ -2,31 +2,24 @@
 
 ## Descrição
 
-A partir de urls válidas um usuário cadastrado no sistema podera realizar operações e usar suas urls de formas mais práticas.
+Uma api com o proposito de encurtar urls, permitindo realizar operações e usar suas urls de formas mais práticas.
 
 ### Tecnologias
 
 Tecnologias usadas para desenvolver a solução:
 
 * [**JAVA**] - Linguagem multiplataforma de alto desempenho; Versão usada 11;
-* [**SRPING BOOT**] - Framework para desenvolvimento de aplicações web;
+* [**SRPING**] - Framework para desenvolvimento de aplicações web;
 * [**MYSQL**] - Banco de dados relacional mantido pela oracle;
-* [**REACT**] - Framework para criar UI web com JavaScript;
 
 ### API
 
 Path's:
-* /usuarios verbo POST - Path utilizado para cadastrar usuarios;
-* /urls verbo POST - Recuperar Urls por usuarios;
-* /login verbo POST - Path para realizar login e autenticação na aplicação;
-* /encurtar verbo POST - Utilizado para gerar um link encurtado a partir de uma url válida, por exemplo: www.google.com.br encurtado ficaria http://{hostname}/s8mPqX.
-* /{urlEncurtada} verbo GET - Utilizado para usar o link encurtado e redirecionar ao original, por exemplo: http://{hostname}/s8mPqX deve redirecionar para www.google.com.br.
-
-Se a aplicação estiver rodando localmente, considerar hostname como localhost:8080.
+* /encurtar verbo POST - Path que deve ser utilizado para encurtar a url;
+* /{urlEncurtada} verbo GET - Path que recupera a url original a partir da encurtada, podendo ser usado para o redirecionamento.
 
 ### INFOS
 
-* IDE = IntelliJ para Java e VisualStudio para React;
+* IDE = IntelliJ Ultimate 2021.1;
 * Tecnlogia de Back-End = Spring Boot;
-* Tecnlogia de Front-End = React;
 * SGBD = MYSQL;
