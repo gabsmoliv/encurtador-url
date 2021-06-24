@@ -1,7 +1,7 @@
 package br.com.lancelot.encurtadorurl.security;
 
-import static br.com.lancelot.encurtadorurl.util.Constantes.METODOS_PERMITIDOS;
-import static br.com.lancelot.encurtadorurl.util.Constantes.HEADERS_PERMITIDOS;
+import static br.com.lancelot.encurtadorurl.util.Constantes.ALLOWED_METHODS;
+import static br.com.lancelot.encurtadorurl.util.Constantes.ALLOWED_HEADERS;
 import static br.com.lancelot.encurtadorurl.util.Constantes.MAX_AGE;
 
 import org.springframework.core.annotation.Order;
@@ -18,10 +18,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/**
- * @author gabriel on 09/04/2021
- */
-
 @Component
 @Order(0)
 public class CORSFilter implements Filter {
@@ -37,8 +33,8 @@ public class CORSFilter implements Filter {
 
         res.setHeader("Access-Control-Allow-Origin", "*");
         res.setHeader("Access-Control-Allow-Credentials", "false");
-        res.setHeader("Access-Control-Allow-Methods", METODOS_PERMITIDOS);
-        res.setHeader("Access-Control-Allow-Headers", HEADERS_PERMITIDOS);
+        res.setHeader("Access-Control-Allow-Methods", ALLOWED_METHODS);
+        res.setHeader("Access-Control-Allow-Headers", ALLOWED_HEADERS);
         res.setHeader("Access-Control-Max-Age", MAX_AGE);
 
         if("OPTIONS".equalsIgnoreCase(((HttpServletRequest) request).getMethod())){

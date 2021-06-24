@@ -12,10 +12,6 @@ import javax.persistence.PrePersist;
 
 import java.time.LocalDateTime;
 
-/**
- * @author gabriel on 08/04/2021
- */
-
 @Data
 @Entity
 @Table(name = "urls")

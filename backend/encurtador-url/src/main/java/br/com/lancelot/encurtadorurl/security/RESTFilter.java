@@ -34,19 +34,6 @@ public class RESTFilter implements Filter {
 
         log.info("Commitando uma trasanção em : {}", req.getRequestURI());
         chain.doFilter(request, response);
-
-
-        //String token = req.getHeader("Authorization");
-
-        /*if(Objects.nonNull(token)) {
-            if(auth.verifyToken(token)) {
-
-            }
-
-        } else {
-            onlyThrow(REQUISICAO_NEGADA);
-            log.error("Requesição sem token de identificação!");
-        }*/
     }
 
     @Override

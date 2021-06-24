@@ -1,18 +1,12 @@
 package br.com.lancelot.encurtadorurl.urls.dto.persist;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import javax.validation.constraints.NotNull;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class UrlPersist {
 
+    @NotNull
     private String urlOriginal;
-
-    private String urlShorted;
 
 }

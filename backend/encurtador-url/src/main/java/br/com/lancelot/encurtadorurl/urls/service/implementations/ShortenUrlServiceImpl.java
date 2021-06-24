@@ -1,7 +1,7 @@
 package br.com.lancelot.encurtadorurl.urls.service.implementations;
 
 import static br.com.lancelot.encurtadorurl.util.Exceptions.checkAndThrow;
-import static br.com.lancelot.encurtadorurl.util.Constantes.URL_NAO_ENCONTRADO;
+import static br.com.lancelot.encurtadorurl.util.Constantes.URL_NOT_FOUND;
 
 import br.com.lancelot.encurtadorurl.urls.entity.Urls;
 import br.com.lancelot.encurtadorurl.urls.repository.UrlRepository;
@@ -12,10 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 import java.util.Random;
-
-/**
- * @author gabriel on 08/04/2021
- */
 
 @Service
 @AllArgsConstructor
@@ -33,7 +29,6 @@ public class ShortenUrlServiceImpl implements ShortenUrlService {
         Random makeARandomNumber = new Random();
         StringBuilder shortedUrl = new StringBuilder();
 
-        //Url shortedUrl vai ter length de 6 e dependendo do valor aleatorio pode ter um numero, letra maiscula ou minuscula.
         for(int i = 0; i < 6; i++) {
             int sortNumber = RandomUtils.nextInt(0, 100);
             if(sortNumber < 10) {
@@ -56,11 +51,10 @@ public class ShortenUrlServiceImpl implements ShortenUrlService {
     public Urls recoverUrl(String urlToRecover) {
 
         Urls urlRecovered = urlRepository.findByUrlShorted(urlToRecover);
-        checkAndThrow(Objects.isNull(urlRecovered), URL_NAO_ENCONTRADO);
+        checkAndThrow(Objects.isNull(urlRecovered), URL_NOT_FOUND);
 
         return urlRecovered;
     }
-
 }
 
 

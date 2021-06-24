@@ -2,24 +2,17 @@ package br.com.lancelot.encurtadorurl.util;
 
 public class Exceptions extends RuntimeException {
 
-    public Exceptions(String mensagem){
-        super(mensagem);
+    public Exceptions(String message){
+        super(message);
     }
 
-    public Exceptions(String message, Throwable cause) {
-        super(message, cause);
+    public static void onlyThrow(String errorMessage) throws Exceptions{
+        throw new Exceptions(errorMessage);
     }
 
-    public static void onlyThrow(String mensagemErro) throws Exceptions{
-        throw new Exceptions(mensagemErro);
-    }
-
-    public static void checkAndThrow(boolean expression, String mensagemErro) throws Exceptions{
-
+    public static void checkAndThrow(boolean expression, String errorMessage) throws Exceptions{
         if(expression) {
-            throw new Exceptions(mensagemErro);
+            throw new Exceptions(errorMessage);
         }
-
     }
-
 }
