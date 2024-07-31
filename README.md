@@ -1,25 +1,21 @@
-# encurtador-url
+# Encurtador-url
 
-## Descrição
+## DESCRIÇÂO
 
 Uma api com o proposito de encurtar urls, permitindo realizar operações e usar suas urls de formas mais práticas.
 
-### Tecnologias
+### TECNOLOGIAS
 
 Tecnologias usadas para desenvolver a solução:
 
-* [**JAVA**] - Linguagem multiplataforma de alto desempenho; Versão usada 11;
-* [**SRPING**] - Framework para desenvolvimento de aplicações web;
-* [**MYSQL**] - Banco de dados relacional mantido pela oracle;
+* [**Kotlin**] - Linguagem multiplataforma de alto desempenho;
+* [**Spring**] - Framework para desenvolvimento de aplicações web;
+* [**Mongo**] - Banco de dados não relacional;
+* [**Kafka**] - Plataforma unificada, de alta capacidade e baixa latência para tratamento de dados em tempo real;
+* [**Redis**] - Banco de armazenamento de estrutura de dados em memória;
 
 ### API
 
-Path's:
-* /encurtar verbo POST - Path que deve ser utilizado para encurtar a url;
-* /{urlEncurtada} verbo GET - Path que recupera a url original a partir da encurtada, podendo ser usado para o redirecionamento.
-
-### INFOS
-
-* IDE = IntelliJ Ultimate 2021.1;
-* Tecnlogia de Back-End = Spring Boot;
-* SGBD = MYSQL;
+Endpoints:
+* POST /shorter-url - Path para realização o encurtamento das URLs;
+* GET /{shortenedUrl} - Path que redireciona para a URL original a partir da da encurtada.
