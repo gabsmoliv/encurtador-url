@@ -1,0 +1,14 @@
+name: shorter-url-compose
+
+services:
+  mongo:
+    image: mongo
+    restart: on-failure
+    container_name: mongodb-shorter-url
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
